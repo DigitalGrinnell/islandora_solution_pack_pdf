@@ -322,7 +322,8 @@ function islandora_pdf_add_jpg_derivative(AbstractObject $object, $file_uri, $ds
  * @see hook_islandora_derivative()
  */
 function islandora_pdf_create_jpg_derivative($file_uri, $dsid, $width, $height) {
-  $source = drupal_realpath($file_uri) . '[0]';
+  // $source = drupal_realpath($file_uri) . '[0]';
+  $source = drupal_realpath($file_uri);
   $matches = array();
   // Get the base name of the source file.
   $base = pathinfo($source, PATHINFO_FILENAME);
